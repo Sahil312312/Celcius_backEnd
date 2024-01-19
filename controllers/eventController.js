@@ -2,8 +2,13 @@ const express = require("express");
 
 exports.getAllEvents = async(req,res,next) => {
     try{
-        console.log("events");
-    }catch(err){
+ res.status(200).json({
+    status: "Success",
+    results: "number of events",
+    data: {
+      events:"events",
+    },
+  });    }catch(err){
         console.log("error ");
     }
 }

@@ -17,8 +17,8 @@ const userRouter = require('./routes/userRoutes')
 
 //3.) Routes
 app.use("/api/v1/event",eventRouter);
-app.use("/api/v1/event",commonRouter);
-app.use("/api/v1/event",userRouter);
+app.use("/api/v1/common",commonRouter);
+app.use("/api/v1/user",userRouter);
 
 
 
