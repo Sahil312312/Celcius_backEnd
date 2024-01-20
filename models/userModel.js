@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
-    fullName: {
+    Name: {
         type: String,
         required: true,
     },
@@ -19,7 +19,6 @@ const userSchema = new mongoose.Schema({
     },
     points : {
         type: Number,
-        required : true,
     },
     Phone_no: {
         type: Number,
@@ -33,10 +32,12 @@ const userSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref: "Event" 
     },
+    tc: { type: Boolean, required: true }
+
     
 }, { timestamps: true });
 
 
 const User = mongoose.model('user', userSchema);
 
-export default User;
+module.exports = User
